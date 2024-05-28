@@ -2,6 +2,13 @@
 //! We learned from the lecture that it is actually the headers that are hash linked, so let's
 //! start with that.
 //!
+/*
+fn hash<T: Hash>(t: &T) -> u64 {
+    let mut s = DefaultHasher::new();
+    t.hash(&mut s);
+    s.finish()
+}
+*/
 
 use crate::hash;
 
@@ -36,7 +43,13 @@ impl Header {
 
     /// Create and return a valid child header.
     fn child(&self) -> Self {
-        todo!("Exercise 2")
+        Self {
+            parent: hash(self),
+            height: self.height + 1,
+            extrinsics_root: (),
+            state_root: (),
+            consensus_digest: (),
+        }
     }
 
     /// Verify that all the given headers form a valid chain from this header to the tip.
