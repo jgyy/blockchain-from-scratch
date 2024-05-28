@@ -77,7 +77,18 @@ impl Header {
 
 /// Build and return a valid chain with exactly five blocks including the genesis block.
 fn build_valid_chain_length_5() -> Vec<Header> {
-    todo!("Exercise 4")
+    let mut chain = Vec::new();
+    let genesis = Header::genesis();
+    chain.push(genesis.clone());
+
+    let mut current_header = genesis;
+    for _ in 0..4 {
+        let child = current_header.child();
+        chain.push(child.clone());
+        current_header = child;
+    }
+
+    chain
 }
 
 /// Build and return a chain with at least three headers.
