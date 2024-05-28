@@ -95,7 +95,24 @@ fn build_valid_chain_length_5() -> Vec<Header> {
 /// The chain should start with a proper genesis header,
 /// but the entire chain should NOT be valid.
 fn build_an_invalid_chain() -> Vec<Header> {
-    todo!("Exercise 5")
+    let mut chain = Vec::new();
+    let genesis = Header::genesis();
+    chain.push(genesis.clone());
+
+    let mut current_header = genesis;
+    let valid_child = current_header.child();
+    chain.push(valid_child.clone());
+
+    let invalid_child = Header {
+        parent: 12345,
+        height: valid_child.height + 1,
+        extrinsics_root: (),
+        state_root: (),
+        consensus_digest: (),
+    };
+    chain.push(invalid_child);
+
+    chain
 }
 
 // To run these tests: `cargo test bc_1

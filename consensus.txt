@@ -1,0 +1,120 @@
++---------------------------+
+|       Genesis Block       |
+|---------------------------|
+| Parent Hash: 0            |
+| New Word: Once            |
+| Nonce: 1                  |
+| Hash: b6804eda            |
++---------------------------+
+        |
+        v
++---------------------------+
+|          Block 1          |
+|---------------------------|
+| Parent Hash: 0            |
+| New Word: Once            |
+| Nonce: 1                  |
+| Hash: b6804eda            |
++---------------------------+
+        |
+        v
+Blockchain
+consensus
+mechanisms
+Proof
+Work
+Authority
+Stake
+students
+explore
+manually
+acting
+shared
+story
+represented
+word
+block
+whiteboard
+available
+substitute
+paper
+online
+drawing
+tool
+chalkboard
+desperate
+Nakamoto
+style
+add
+student
+choose
+parent
+hash
+build
+find
+nonce
+required
+difficulty
+hasher
+repeatedly
+increment
+button
+valid
+preimage
+search
+game
+predetermined
+time
+winner
+author
+blocks
+longest
+chain
+attacks
+instructor
+encourage
+groups
+perform
+censor
+specific
+words
+fork
+around
+publish
+invalid
+trick
+miners
+waste
+rate
+hard
+fork
+two
+words
+rule
+ignore
+formalize
+language
+structure
+allow
+small
+set
+transaction
+types
+block
+sentence
+abbreviated
+example
+modifications
+formalization
+real
+world
+cast
+characters
+locations
+action
+move
+affect
+difficulty
+adjustment
+algorithm
+goals
