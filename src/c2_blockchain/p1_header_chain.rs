@@ -57,7 +57,19 @@ impl Header {
     /// This method may assume that the block on which it is called is valid, but it
     /// must verify all of the blocks in the slice;
     fn verify_sub_chain(&self, chain: &[Header]) -> bool {
-        todo!("Exercise 3")
+        let mut previous_header = self;
+
+        for header in chain {
+            if header.parent != hash(previous_header) {
+                return false;
+            }
+            if header.height != previous_header.height + 1 {
+                return false;
+            }
+            previous_header = header;
+        }
+
+        true
     }
 }
 
